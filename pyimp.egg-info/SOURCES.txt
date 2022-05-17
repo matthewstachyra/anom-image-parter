@@ -1,0 +1,8 @@
+setup.py
+pyimp/__init__.py
+pyimp/__main__.py
+pyimp/utils.py
+pyimp.egg-info/PKG-INFO
+pyimp.egg-info/SOURCES.txt
+pyimp.egg-info/dependency_links.txt
+pyimp.egg-info/top_level.txt

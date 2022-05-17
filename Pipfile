@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+jupyter = "*"
+pandas = "*"
+opencv-python = "*"
+numpy = "*"
+pillow = "*"
+matplotlib = "*"
+jupyter-contrib-nbextensions = "*"
+pyimp = {editable = true, path = "."}
+scikit-learn = "*"
+plotly = "*"
+seaborn = "*"
+pytest = "*"
+image-utils = {editable = true, path = "."}
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

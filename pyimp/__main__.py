@@ -19,11 +19,12 @@ if __name__ == "__main__":
     MODE        = 'feature'     # either 'default' or 'feature'
 
     DIR         = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    PATH        = os.path.join(DIR, 'images', 'partitioned', MODE)
-    ANOMPATH    = os.path.join(PATH, 'anom')
-    NOANOMPATH  = os.path.join(PATH, 'noanom')
+    PATH        = os.path.join(DIR, 'images')
+    ANOMPATH    = os.path.join(PATH, 'partitioned', MODE, 'anom', SUBTYPE)
+    NOANOMPATH  = os.path.join(PATH, 'partitioned', MODE, 'noanom', SUBTYPE)
     ANOMFILE    = os.path.join(ANOMPATH, str(SUBTYPE + str(1) + ".npy"))
     NOANOMFILE  = os.path.join(NOANOMPATH, str(SUBTYPE + str(0) + ".npy"))
+
 
     #####################################################
     #                                                   #

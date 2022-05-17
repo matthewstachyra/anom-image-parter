@@ -6,7 +6,8 @@ Originally developed for an anomaly detection problem I was solving as part of a
 
 Example of algorithm and documentation:
 
-'def featureSplice(path, im, ydim, k):
+```
+def featureSplice(path, im, ydim, k):
     """return list of 2-tuples with indices of partitions of image, where image is a numpy array,
     integer dim is used to generate the row windows of the partitions, and integer k is the number
     of features to extract
@@ -68,4 +69,5 @@ Example of algorithm and documentation:
     return [[(r, r+ydim),(c, c+xdim)]
             for c in range(startIndex, xdim*(k), xdim)
             for r in range(0, len(npim), ydim)]
-'
+
+```

@@ -1,0 +1,12 @@
+name: pyimp-yaml
+on: [push]
+jobs:
+  install:
+    steps:
+      - name: install dependencies
+        run: |
+          pip3 install pipenv
+          pipenv shell
+          pipenv install
+      - name: run main
+        run: pipenv run python main.py

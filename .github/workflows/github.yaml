@@ -2,12 +2,12 @@ name: pyimp-yaml
 on: [push]
 jobs:
   install:
+  runs-on: ubuntu-latest
     steps:
       - name: install dependencies
-        runs-on: ubuntu-latest
-        run: |
-          pip3 install pipenv
-          pipenv shell
-          pipenv install
+        run: echo "echo command runs"
+          #pip3 install pipenv
+          #pipenv shell
+          #pipenv install
       - name: run main
         run: pipenv run python main.py

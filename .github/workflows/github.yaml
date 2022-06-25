@@ -4,6 +4,7 @@ jobs:
   install:
     steps:
       - name: install dependencies
+        runs-on: ubuntu-latest
         run: |
           pip3 install pipenv
           pipenv shell

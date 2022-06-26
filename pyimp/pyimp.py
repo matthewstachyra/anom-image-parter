@@ -388,7 +388,8 @@ def subsetIms(ims, imtype, leaveout=False, types=
               ['Shirts', 'Paper', 'Laptops', 'Cans', 'Bananas', 'Shoes',
                'Apples', 'Tires', 'AnomalyAbsent', '200', '750']):
 
-    """get subset of images of some type (i.e., string like '200', 'AnomalyAbsent', or 'Apples').
+    """get subset of images of some type (i.e., string like '200', 'AnomalyAbsent', or 'Apples') or return 
+    all images other than those with the type specified if leaveout is set to True.
 
     NOTE  constrains types we can subset by the default value for List[str] in method definition.
     """

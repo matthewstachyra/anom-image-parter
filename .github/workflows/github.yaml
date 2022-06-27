@@ -8,7 +8,8 @@ jobs:
     - uses: actions/checkout@v3
     - name: set up python
       uses: actions/setup-python@v3
-      with: python-version: '3.8'
+      with:
+	python-version: '3.8'
 
     - name: install dependencies
       # the -m flag means to use the specified python interpreter, here 3.8

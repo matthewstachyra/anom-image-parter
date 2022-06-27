@@ -1,22 +1,44 @@
-name: pyimp-yaml
+#name: pyimp-yaml
+#on: [push]
+#jobs:
+#  pytest:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#    - uses: actions/checkout@v3
+#    - name: set up python
+#      uses: actions/setup-python@v3
+#      with:
+#	python-version: '3.8'
+#
+#    - name: install dependencies
+#      # the -m flag means to use the specified python interpreter, here 3.8
+#      run: |
+#        python -m pip install --upgrade pipenv
+#        # deploy ensures packages are properly locked in Pipfile.lock, and aborts if the lock file is out-of-date
+#        pipenv install --deploy 
+#    - name: Test with pytest
+#      run: |
+#        pipenv run pytest --cov-report term
+
+name: Python package
+
 on: [push]
+
 jobs:
-  pytest:
+  build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: set up python
-      uses: actions/setup-python@v3
-      with:
-	python-version: '3.8'
-
-    - name: install dependencies
-      # the -m flag means to use the specified python interpreter, here 3.8
-      run: |
-        python -m pip install --upgrade pipenv
-        # deploy ensures packages are properly locked in Pipfile.lock, and aborts if the lock file is out-of-date
-        pipenv install --deploy 
-    - name: Test with pytest
-      run: |
-        pipenv run pytest --cov-report term
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v3
+        with:
+          # Semantic version range syntax or exact version of a Python version
+          python-version: '3.x'
+          # Optional - x64 or x86 architecture, defaults to x64
+          architecture: 'x64'
+      # You can test your matrix by printing the current Python version
+      - name: Display Python version
+        run: python -c "import sys; print(sys.version)"

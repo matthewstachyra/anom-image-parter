@@ -3,25 +3,27 @@ name: pyimp-yaml
 on: [push]
 
 jobs:
+  # the way to read the below is: "there is a job pytest that runs on ubuntu and has these steps.
+  # all of these steps uses this actions checkout@v3."
   pytest:
     runs-on: ubuntu-latest
 
     steps:
-	- uses: actions/checkout@v3
-	- name: set up python
-      	  uses: actions/setup-python@v3
-	  with:
-		python-version: '3.8'
+    	- uses: actions/checkout@v3
 
-        - name: install dependencies
-      # the -m flag means to use the specified python interpreter, here 3.8
-          run: |
-		python -m pip install --upgrade pipenv
-		# deploy ensures packages are properly locked in Pipfile.lock, and aborts if the lock file is out-of-date
-		pipenv install --deploy 
-    	- name: Test with pytest
-          run: |
-		pipenv run pytest --cov-report term
+      - name: set up python
+        uses: actions/setup-python@v3
+	      with: python-version: '3.8'
+
+      - name: install dependencies
+        run: |
+          # the -m flag means to use the specified python interpreter, here 3.8
+		      python -m pip install --upgrade pipenv
+		      # deploy ensures packages are properly locked in Pipfile.lock, and aborts if the lock file is out-of-date
+		      pipenv install --deploy 
+
+    	- name: test with pytest
+        run: pipenv run pytest --cov-report term
 
 # name: Python package
 # 

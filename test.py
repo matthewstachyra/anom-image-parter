@@ -39,19 +39,20 @@ def test_getRefIm(df):
     assert ref and "anomaly_only_view" not in ref
 
 
-#def test_buildreference(path, df, ref):
-#    '''test buildReference() by asserting whether a dictionary with a reference image for every tag is returned.
-#    '''
-#    # verify ref is a dictionary
-#    #TODO
-#
-#    # count number of tags
-#    #TODO
-#
-#    # check whether ref has as many keys as there are tags
-#    #TODO
-#
-#
+def test_buildreference(path, df, ref):
+    '''test buildReference() by asserting whether a dictionary with a reference image for every tag is returned.
+    '''
+    # verify ref is a dictionary
+    assert type(ref)==dict 
+
+    # count number of tags
+    
+
+    # check whether ref has as many keys as there are tags
+    # assert len(ref)==keycount    
+	    
+
+
 #def test_subsetIms(df):
 #    '''test subsetIms() by asserting the items in the returned dataframe all contain the inputted substring in the path.
 #    '''

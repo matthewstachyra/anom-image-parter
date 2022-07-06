@@ -1,6 +1,5 @@
-pyImp (Python Image Partioning) library
----------------------------------------
-A python library with utilities to partition images for use in classification tasks.
+anom-image-parter is a Python library to prepare image for anomaly detection tasks.
+-----------------
 
 Originally developed for an anomaly detection problem I was solving as part of an internship. The images were xray images of trucks with cargos.
 
